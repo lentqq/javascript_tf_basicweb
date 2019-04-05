@@ -1,0 +1,51 @@
+<div class="container body-content span=8 offset=2">
+    <div class="well">
+        <form class="form-inline" action="/" method="POST">
+            <fieldset>
+                <div class="form-group">
+                    <div class="col-sm-1 ">
+                        <input type="number" class="form-control" id="firstNumber" placeholder="First Number"
+                               name="calculator[firstNumber]" value="{{calculator.firstNumber}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4 ">
+                        <select class="form-control" name="calculator[operator]">
+                            <option value="+"{{selectif calculator.operator '+'}}>+</option>
+                            <option value="-"{{selectif calculator.operator '-'}}>-</option>
+                            <option value="*"{{selectif calculator.operator '*'}}>*</option>
+                            <option value="/"{{selectif calculator.operator '/'}}>/</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4 ">
+                        <input type="number" class="form-control" id="secondNumber" placeholder="Second Number"
+                               name="calculator[secondNumber]" value="{{calculator.secondNumber}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-2 ">
+                        <p>=</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4 ">
+                        <input type="text" readonly class="form-control" id="finalResult" placeholder="Final Result"
+                               name="finalResult" value="{{finalResult}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <button type="submit" class="btn btn-primary">Calculate</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
